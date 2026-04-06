@@ -5,7 +5,7 @@
  *
  * Hooks into the Revive admin UI to inject:
  * 1. The dark mode CSS file (loaded after core CSS for proper overrides)
- * 2. The toggle JS file (loaded in <head> via registerJSFile)
+ * 2. The toggle JS file (loaded in <head> via otherJSFiles)
  *
  * License: GPLv2 or later
  */
@@ -26,7 +26,7 @@ class Plugins_Admin_RvDarkMode_RvDarkMode extends OX_Component
 
     /**
      * Called before page header HTML is rendered.
-     * Registers both CSS and JS files via the proper Revive APIs.
+     * Registers both CSS and JS files.
      */
     public function injectDarkMode($oContext)
     {
@@ -35,8 +35,10 @@ class Plugins_Admin_RvDarkMode_RvDarkMode extends OX_Component
         // CSS: loads after core CSS in <head>, scoped under .rv-dark-mode
         registerStylesheetFile($pluginBase . 'css/dark-mode.css');
 
-        // JS: toggle button + localStorage persistence
-        $oUI = OA_Admin_UI::getInstance();
-        $oUI->registerJSFile($pluginBase . 'js/dark-mode-toggle.js');
+        // JS: register via the same global UI instance and also directly
+        // into the global array to ensure it gets picked up by the template
+        $jsFile = $pluginBase . 'js/dark-mode-toggle.js';
+        $GLOBALS['_MAX']['ADMIN_UI'] = OA_Admin_UI::getInstance();
+        $GLOBALS['_MAX']['ADMIN_UI']->otherJSFiles[] = $jsFile;
     }
 }
