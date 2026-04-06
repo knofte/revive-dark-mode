@@ -14,7 +14,7 @@ require_once LIB_PATH . '/Plugin/Component.php';
 
 class Plugins_Admin_RvDarkMode_RvDarkMode extends OX_Component
 {
-    const VERSION = '1.0.7';
+    const VERSION = '1.0.8';
 
     /**
      * Register UI event listeners.

@@ -10,7 +10,7 @@
     <authorUrl>https://github.com/knofte/revive-dark-mode</authorUrl>
     <license>GPLv2</license>
     <description>Dark mode theme for Revive Adserver admin UI</description>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <oxversion>5.0.0</oxversion>
     <extends>admin</extends>
 

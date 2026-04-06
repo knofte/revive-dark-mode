@@ -269,6 +269,112 @@
 
 
 /* ============================================================
+   Section Tabs (Advertiser Statistics, Campaigns, etc.)
+   ============================================================ */
+
+.rv-dark-mode #oaSectionTabs li,
+.rv-dark-mode #oaSectionTabs li div.left,
+.rv-dark-mode #oaSectionTabs li.first div.left,
+.rv-dark-mode #oaSectionTabs li.last div.right,
+.rv-dark-mode #oaSectionTabs li div.right,
+.rv-dark-mode #oaSectionTabs li.after-active div.left {
+    background-image: none;
+    background-color: var(--rvd-bg-tertiary);
+}
+
+.rv-dark-mode #oaSectionTabs li.active,
+.rv-dark-mode #oaSectionTabs li.active div.left,
+.rv-dark-mode #oaSectionTabs li.active div.right {
+    background-image: none;
+    background-color: var(--rvd-accent);
+}
+
+.rv-dark-mode #oaSectionTabs li span,
+.rv-dark-mode #oaSectionTabs li a {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode #oaSectionTabs li.active span,
+.rv-dark-mode #oaSectionTabs li.active a {
+    color: #fff;
+}
+
+
+/* ============================================================
+   Shortcuts & Help Buttons
+   ============================================================ */
+
+.rv-dark-mode .shortcuts,
+.rv-dark-mode .shortcut,
+.rv-dark-mode .shortcutsButton,
+.rv-dark-mode a.inlineHelp,
+.rv-dark-mode .helpButton {
+    background-color: var(--rvd-bg-tertiary);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-secondary);
+    background-image: none;
+}
+
+.rv-dark-mode .shortcuts:hover,
+.rv-dark-mode .shortcutsButton:hover,
+.rv-dark-mode a.inlineHelp:hover,
+.rv-dark-mode .helpButton:hover {
+    background-color: var(--rvd-bg-hover);
+    color: var(--rvd-text-primary);
+}
+
+
+/* ============================================================
+   Date Picker / Calendar Inputs
+   ============================================================ */
+
+.rv-dark-mode .dateRange,
+.rv-dark-mode .dateRange input,
+.rv-dark-mode .dateRange select,
+.rv-dark-mode #periodPresetSelect {
+    background-color: var(--rvd-bg-input);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-secondary);
+}
+
+.rv-dark-mode .dateRange label,
+.rv-dark-mode .dateRange span {
+    color: var(--rvd-text-primary);
+}
+
+
+/* ============================================================
+   Statistics Table Overrides
+   ============================================================ */
+
+.rv-dark-mode .logTable th,
+.rv-dark-mode .stats th,
+.rv-dark-mode table.tableBoxFull th,
+.rv-dark-mode table.admin th {
+    background-color: var(--rvd-table-header-bg);
+    background-image: none;
+    color: var(--rvd-accent);
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode .logTable td,
+.rv-dark-mode .stats td,
+.rv-dark-mode table.tableBoxFull td,
+.rv-dark-mode table.admin td {
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode .logTable .total td,
+.rv-dark-mode .stats .total td,
+.rv-dark-mode tr.total td {
+    background-color: var(--rvd-table-header-bg);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-primary);
+}
+
+
+/* ============================================================
    Links
    ============================================================ */
 
