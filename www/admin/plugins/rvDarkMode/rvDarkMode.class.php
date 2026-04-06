@@ -13,7 +13,7 @@
 
 require_once LIB_PATH . '/Plugin/Component.php';
 
-class Plugins_Admin_rvDarkMode_rvDarkMode extends OX_Component
+class Plugins_Admin_RvDarkMode_RvDarkMode extends OX_Component
 {
     /**
      * Register UI event listeners.
@@ -36,7 +36,7 @@ class Plugins_Admin_rvDarkMode_rvDarkMode extends OX_Component
         // Register the dark mode CSS file.
         // It loads after core CSS in <head>, giving it override priority.
         // All rules are scoped under .rv-dark-mode so they only apply when active.
-        $cssPath = OX::assetPath('plugins/rvDarkMode/css/dark-mode.css');
+        $cssPath = MAX::constructURL(MAX_URL_ADMIN, 'plugins/rvDarkMode/css/dark-mode.css');
         registerStylesheetFile($cssPath);
 
         // Register an afterPageHeader listener to inject the toggle JS.
