@@ -1,0 +1,9 @@
+Revive Dark Mode
+================
+
+Dark mode theme for the Revive Adserver admin interface.
+
+After installing, a moon/sun toggle icon appears in the admin header bar.
+Your preference is saved per-browser via localStorage.
+
+License: GPLv2 or later

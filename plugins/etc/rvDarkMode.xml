@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href=""?>
+
+<plugin>
+    <name>rvDarkMode</name>
+    <displayName>Revive Dark Mode</displayName>
+    <creationDate>2026-04-05</creationDate>
+    <author>Community</author>
+    <authorEmail>noreply@example.com</authorEmail>
+    <authorUrl>https://github.com/knofte/revive-dark-mode</authorUrl>
+    <license>GPLv2</license>
+    <description>Dark mode theme for the Revive Adserver admin interface. Toggle via the moon icon in the header.</description>
+    <version>1.0.0</version>
+    <type>extension</type>
+
+    <install>
+        <files>
+            <file path="{PLUGINPATH}">rvDarkMode.readme.txt</file>
+        </files>
+
+        <contents>
+            <group name="rvDarkMode">1</group>
+        </contents>
+    </install>
+</plugin>

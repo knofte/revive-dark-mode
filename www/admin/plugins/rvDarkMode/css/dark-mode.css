@@ -1,0 +1,701 @@
+/*
+ * Revive Dark Mode - CSS Override
+ *
+ * Applied only when <html> has the class "rv-dark-mode".
+ * Toggle is injected via JavaScript in the admin header.
+ *
+ * Uses CSS custom properties for easy tuning.
+ * All selectors are scoped under .rv-dark-mode to avoid
+ * interfering with the light theme when toggled off.
+ *
+ * License: GPLv2 or later
+ */
+
+/* ============================================================
+   CSS Custom Properties (Dark Palette)
+   ============================================================ */
+
+.rv-dark-mode {
+    --rvd-bg-primary:       #1a1a2e;
+    --rvd-bg-secondary:     #16213e;
+    --rvd-bg-tertiary:      #1f2b45;
+    --rvd-bg-surface:       #222b42;
+    --rvd-bg-surface-alt:   #1c2538;
+    --rvd-bg-hover:         #2a3650;
+    --rvd-bg-active:        #324060;
+    --rvd-bg-input:         #1e2740;
+
+    --rvd-text-primary:     #e0e0e0;
+    --rvd-text-secondary:   #b0b8c8;
+    --rvd-text-muted:       #7a8599;
+    --rvd-text-inverse:     #1a1a2e;
+
+    --rvd-border-primary:   #2e3a52;
+    --rvd-border-secondary: #3a4660;
+    --rvd-border-light:     #253050;
+
+    --rvd-accent:           #4da6e8;
+    --rvd-accent-hover:     #6bb8f0;
+    --rvd-accent-active:    #3090d0;
+
+    --rvd-success:          #4caf7d;
+    --rvd-success-bg:       #1a3328;
+    --rvd-success-border:   #2a5040;
+
+    --rvd-warning:          #e8a84c;
+    --rvd-warning-bg:       #332a1a;
+    --rvd-warning-border:   #504028;
+
+    --rvd-error:            #e86060;
+    --rvd-error-bg:         #331a1a;
+    --rvd-error-border:     #502828;
+
+    --rvd-info:             #5ca8d8;
+    --rvd-info-bg:          #1a2833;
+    --rvd-info-border:      #284050;
+
+    --rvd-btn-primary:      #2878b8;
+    --rvd-btn-primary-hover:#3090d0;
+    --rvd-btn-disabled:     #3a4660;
+    --rvd-btn-disabled-text:#6a7585;
+
+    --rvd-table-even:       #1c2538;
+    --rvd-table-odd:        #222b42;
+    --rvd-table-hover:      #2a3650;
+    --rvd-table-highlight:  #1a3328;
+    --rvd-table-header-bg:  #1a2236;
+    --rvd-table-header-border: #3a4660;
+
+    --rvd-shadow:           rgba(0, 0, 0, 0.3);
+}
+
+
+/* ============================================================
+   Body & Root Elements
+   ============================================================ */
+
+.rv-dark-mode body,
+.rv-dark-mode {
+    color: var(--rvd-text-primary);
+    background-color: var(--rvd-bg-primary);
+}
+
+.rv-dark-mode body.hasGradient #firstLevelContent {
+    background: var(--rvd-bg-secondary);
+    background-image: none;
+}
+
+.rv-dark-mode #firstLevelContent {
+    background: var(--rvd-bg-secondary);
+}
+
+
+/* ============================================================
+   Header
+   ============================================================ */
+
+.rv-dark-mode #oaHeader {
+    background-color: var(--rvd-bg-primary) !important;
+    border-bottom: 1px solid var(--rvd-border-primary);
+}
+
+.rv-dark-mode .brandingName {
+    color: var(--rvd-text-primary) !important;
+}
+
+.rv-dark-mode #oaNavigationExtra,
+.rv-dark-mode #oaNavigationExtraTop {
+    color: var(--rvd-text-secondary) !important;
+}
+
+.rv-dark-mode #oaNavigationExtra a,
+.rv-dark-mode #oaNavigationExtraTop a {
+    color: var(--rvd-accent);
+}
+
+
+/* ============================================================
+   First Level Navigation (Main Tabs)
+   ============================================================ */
+
+.rv-dark-mode #oaNavigationTabs {
+    border-bottom-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode #oaNavigationTabs li span,
+.rv-dark-mode #oaNavigationTabs li a {
+    color: var(--rvd-text-secondary);
+}
+
+.rv-dark-mode #oaNavigationTabs li:hover span,
+.rv-dark-mode #oaNavigationTabs li:hover a {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode #oaNavigationTabs li.active span,
+.rv-dark-mode #oaNavigationTabs li.active a {
+    color: #fff;
+    background-color: var(--rvd-accent);
+}
+
+.rv-dark-mode #oaNavigationTabs li span,
+.rv-dark-mode #oaNavigationTabs li a {
+    border-color: var(--rvd-border-primary);
+}
+
+
+/* ============================================================
+   Second Level Navigation (Sidebar)
+   ============================================================ */
+
+.rv-dark-mode #secondLevelNavigation {
+    background: var(--rvd-bg-secondary);
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation {
+    background: var(--rvd-bg-tertiary);
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li a {
+    color: var(--rvd-text-secondary);
+    border-color: var(--rvd-border-primary);
+    background-color: var(--rvd-bg-tertiary);
+    background-image: none;
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li a:hover {
+    color: var(--rvd-text-primary);
+    background-color: var(--rvd-bg-hover);
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li.active a {
+    color: #fff;
+    background-color: var(--rvd-accent);
+    background-image: none;
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li.active ul {
+    background: var(--rvd-bg-surface);
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li.active ul li a {
+    color: var(--rvd-text-secondary);
+    background: var(--rvd-bg-surface);
+    background-image: none;
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li.active ul li a:hover {
+    color: var(--rvd-text-primary);
+    background-color: var(--rvd-bg-hover);
+}
+
+.rv-dark-mode #secondLevelNavigation .navigation li.active ul li.active a {
+    color: var(--rvd-accent);
+    background-color: var(--rvd-bg-active);
+}
+
+
+/* ============================================================
+   Third Level Navigation & Content Area
+   ============================================================ */
+
+.rv-dark-mode #thirdLevelNavigation {
+    background: var(--rvd-bg-surface);
+}
+
+.rv-dark-mode #thirdLevelNavigation li span,
+.rv-dark-mode #thirdLevelNavigation li a {
+    color: var(--rvd-text-secondary);
+}
+
+.rv-dark-mode #thirdLevelNavigation li:hover span,
+.rv-dark-mode #thirdLevelNavigation li:hover a {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode #thirdLevelNavigation li.active span,
+.rv-dark-mode #thirdLevelNavigation li.active a {
+    color: var(--rvd-accent);
+}
+
+.rv-dark-mode #thirdLevelHeader {
+    background: var(--rvd-bg-surface);
+    background-image: none;
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode #thirdLevelContent {
+    border-color: var(--rvd-border-primary);
+    background: var(--rvd-bg-surface);
+}
+
+
+/* ============================================================
+   Links
+   ============================================================ */
+
+.rv-dark-mode a {
+    color: var(--rvd-accent);
+}
+
+.rv-dark-mode a:hover {
+    color: var(--rvd-accent-hover);
+}
+
+.rv-dark-mode a:active {
+    color: var(--rvd-accent-active);
+}
+
+.rv-dark-mode a:visited {
+    color: var(--rvd-accent);
+}
+
+
+/* ============================================================
+   Forms
+   ============================================================ */
+
+.rv-dark-mode select,
+.rv-dark-mode textarea,
+.rv-dark-mode input[type="text"],
+.rv-dark-mode input[type="password"],
+.rv-dark-mode input[type="email"],
+.rv-dark-mode input[type="number"],
+.rv-dark-mode input[type="url"],
+.rv-dark-mode input[type="search"] {
+    background-color: var(--rvd-bg-input);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-secondary);
+}
+
+.rv-dark-mode select:focus,
+.rv-dark-mode textarea:focus,
+.rv-dark-mode input[type="text"]:focus,
+.rv-dark-mode input[type="password"]:focus {
+    background-color: var(--rvd-bg-hover);
+    border-color: var(--rvd-accent);
+    outline-color: var(--rvd-accent);
+}
+
+.rv-dark-mode select[disabled],
+.rv-dark-mode textarea[disabled],
+.rv-dark-mode input[disabled] {
+    background-color: var(--rvd-bg-tertiary);
+    color: var(--rvd-text-muted);
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode select.flat,
+.rv-dark-mode textarea.flat,
+.rv-dark-mode input.flat {
+    border-color: var(--rvd-border-secondary);
+}
+
+.rv-dark-mode select.error,
+.rv-dark-mode textarea.error,
+.rv-dark-mode input.error {
+    border-color: var(--rvd-error);
+}
+
+.rv-dark-mode select.error:focus,
+.rv-dark-mode textarea.error:focus,
+.rv-dark-mode input.error:focus {
+    background-color: var(--rvd-error-bg);
+}
+
+.rv-dark-mode input.inerror,
+.rv-dark-mode select.inerror {
+    background-color: var(--rvd-error-bg);
+}
+
+.rv-dark-mode option {
+    background-color: var(--rvd-bg-input);
+    color: var(--rvd-text-primary);
+}
+
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.rv-dark-mode .new-form button,
+.rv-dark-mode button.primary,
+.rv-dark-mode input[type="submit"] {
+    background-color: var(--rvd-btn-primary);
+    color: #fff;
+    border-color: var(--rvd-btn-primary);
+}
+
+.rv-dark-mode .new-form button:hover,
+.rv-dark-mode button.primary:hover,
+.rv-dark-mode input[type="submit"]:hover {
+    background-color: var(--rvd-btn-primary-hover);
+    border-color: var(--rvd-btn-primary-hover);
+}
+
+.rv-dark-mode .new-form button[disabled],
+.rv-dark-mode button[disabled],
+.rv-dark-mode input[type="submit"][disabled] {
+    background-color: var(--rvd-btn-disabled);
+    color: var(--rvd-btn-disabled-text);
+    border-color: var(--rvd-btn-disabled);
+}
+
+
+/* ============================================================
+   Tables (both .tableWrapper and .table patterns)
+   ============================================================ */
+
+.rv-dark-mode .tableWrapper .tableHeader {
+    border-color: var(--rvd-border-primary);
+    background: var(--rvd-table-header-bg);
+}
+
+.rv-dark-mode .tableWrapper table {
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode .tableWrapper table th,
+.rv-dark-mode .table th {
+    background: var(--rvd-table-header-bg);
+    background-image: none;
+    border-color: var(--rvd-table-header-border);
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .tableWrapper table td,
+.rv-dark-mode .table td {
+    border-bottom-color: var(--rvd-border-primary);
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .tableWrapper table tbody tr.even,
+.rv-dark-mode .table td.dark,
+.rv-dark-mode .even,
+.rv-dark-mode .section .dark {
+    background-color: var(--rvd-table-even);
+}
+
+.rv-dark-mode .tableWrapper table tbody tr.odd,
+.rv-dark-mode .table td.light,
+.rv-dark-mode .odd,
+.rv-dark-mode .section .light {
+    background-color: var(--rvd-table-odd);
+}
+
+.rv-dark-mode .tableWrapper table tbody tr:hover,
+.rv-dark-mode .table tr:hover td {
+    background-color: var(--rvd-table-hover);
+}
+
+.rv-dark-mode .tableWrapper table tbody tr.hl {
+    background-color: var(--rvd-table-highlight);
+}
+
+.rv-dark-mode .tableWrapper table tbody tr.active {
+    background-color: var(--rvd-bg-active);
+}
+
+/* Red/green table cell variants */
+.rv-dark-mode .table td.redlight {
+    background-color: var(--rvd-error-bg);
+}
+
+.rv-dark-mode .table td.reddark {
+    background-color: #2d1a1a;
+}
+
+.rv-dark-mode .table td.greenlight {
+    background-color: var(--rvd-success-bg);
+}
+
+.rv-dark-mode .table td.greendark {
+    background-color: #153322;
+}
+
+/* Table dropdowns */
+.rv-dark-mode .tableWrapper .dropDown span span {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .tableWrapper .dropDown.active span span {
+    color: #fff;
+}
+
+.rv-dark-mode .tableWrapper .dropDown ul {
+    background: var(--rvd-bg-surface);
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode .tableWrapper .dropDown ul li a {
+    color: var(--rvd-accent);
+}
+
+.rv-dark-mode .tableWrapper .dropDown ul li a:hover {
+    background-color: var(--rvd-accent);
+    color: #fff;
+}
+
+
+/* ============================================================
+   Messages & Alerts
+   ============================================================ */
+
+.rv-dark-mode div.message div.confirm {
+    color: var(--rvd-success);
+    background-color: var(--rvd-success-bg);
+    border-color: var(--rvd-success-border);
+}
+
+.rv-dark-mode div.message div.info {
+    color: var(--rvd-info);
+    background-color: var(--rvd-info-bg);
+    border-color: var(--rvd-info-border);
+}
+
+.rv-dark-mode div.message div.warning {
+    color: var(--rvd-warning);
+    background-color: var(--rvd-warning-bg);
+    border-color: var(--rvd-warning-border);
+}
+
+.rv-dark-mode div.message div.error {
+    color: var(--rvd-error);
+    background-color: var(--rvd-error-bg);
+    border-color: var(--rvd-error-border);
+}
+
+
+/* ============================================================
+   Panels & Sections
+   ============================================================ */
+
+.rv-dark-mode .panel {
+    border-color: var(--rvd-border-primary);
+    background: var(--rvd-bg-surface);
+    background-image: none;
+}
+
+.rv-dark-mode .tableMessage .panel {
+    border-color: var(--rvd-border-primary);
+    background: var(--rvd-bg-surface);
+    background-image: none;
+}
+
+.rv-dark-mode .control-set {
+    border-color: var(--rvd-border-primary);
+    background: var(--rvd-bg-surface);
+    background-image: none;
+    color: var(--rvd-text-secondary);
+}
+
+.rv-dark-mode div.contextLinks {
+    background-color: var(--rvd-bg-surface);
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode div.contextLinks h4 {
+    color: var(--rvd-text-secondary);
+}
+
+
+/* ============================================================
+   Section Headers
+   ============================================================ */
+
+.rv-dark-mode .section h2,
+.rv-dark-mode h2 {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .section h3 {
+    border-bottom-color: var(--rvd-border-secondary);
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .section .row {
+    border-bottom-color: var(--rvd-border-primary);
+}
+
+
+/* ============================================================
+   Status Colors
+   ============================================================ */
+
+.rv-dark-mode .sts-accepted {
+    color: var(--rvd-success);
+}
+
+.rv-dark-mode .sts-rejected,
+.rv-dark-mode .sts-pending,
+.rv-dark-mode .sts-paused,
+.rv-dark-mode .sts-not-started,
+.rv-dark-mode .sts-finished {
+    color: var(--rvd-text-muted);
+}
+
+.rv-dark-mode .sts-inactive {
+    color: var(--rvd-warning);
+}
+
+.rv-dark-mode .sts-awaiting {
+    color: var(--rvd-error);
+}
+
+
+/* ============================================================
+   Modals (jqmodal)
+   ============================================================ */
+
+.rv-dark-mode .jqmWindow {
+    background-color: var(--rvd-bg-surface);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-secondary);
+}
+
+.rv-dark-mode .jqmOverlay {
+    background-color: #000;
+}
+
+
+/* ============================================================
+   Misc UI Elements
+   ============================================================ */
+
+/* Horizontal rules / breaks */
+.rv-dark-mode hr {
+    border-color: var(--rvd-border-primary);
+}
+
+/* Help text */
+.rv-dark-mode .help,
+.rv-dark-mode .oa-help {
+    color: var(--rvd-text-muted);
+}
+
+/* Tooltips */
+.rv-dark-mode .tooltip {
+    background-color: var(--rvd-bg-primary);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-secondary);
+}
+
+/* Breadcrumb / page path */
+.rv-dark-mode .breadcrumb,
+.rv-dark-mode #entity-path {
+    color: var(--rvd-text-muted);
+}
+
+.rv-dark-mode #entity-path a {
+    color: var(--rvd-accent);
+}
+
+/* Info boxes with yellow background */
+.rv-dark-mode td[bgcolor],
+.rv-dark-mode .FFFFE1 {
+    background-color: var(--rvd-info-bg) !important;
+}
+
+/* Legacy inline bg colors (catch-all for bgcolor attributes) */
+.rv-dark-mode [bgcolor="#FFFFFF"],
+.rv-dark-mode [bgcolor="white"] {
+    background-color: var(--rvd-bg-surface) !important;
+}
+
+.rv-dark-mode [bgcolor="#F6F6F6"],
+.rv-dark-mode [bgcolor="#f6f6f6"] {
+    background-color: var(--rvd-table-even) !important;
+}
+
+.rv-dark-mode [bgcolor="#888888"] {
+    background-color: var(--rvd-border-primary) !important;
+}
+
+/* Scrollbars (for Webkit browsers) */
+.rv-dark-mode ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.rv-dark-mode ::-webkit-scrollbar-track {
+    background: var(--rvd-bg-primary);
+}
+
+.rv-dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--rvd-border-secondary);
+    border-radius: 5px;
+}
+
+.rv-dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: var(--rvd-text-muted);
+}
+
+
+/* ============================================================
+   Images - Invert certain UI icons for dark mode
+   ============================================================ */
+
+.rv-dark-mode img[src*="icon-"],
+.rv-dark-mode img[src*="caret-"],
+.rv-dark-mode img[src*="triangle-"] {
+    filter: invert(0.8);
+}
+
+/* Don't invert banner preview images or branding logos */
+.rv-dark-mode img[src*="banner"],
+.rv-dark-mode img[src*="logo"],
+.rv-dark-mode #oaHeader img {
+    filter: none;
+}
+
+
+/* ============================================================
+   Dark Mode Toggle Button (injected by JS)
+   ============================================================ */
+
+#rv-dark-mode-toggle {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px 8px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    vertical-align: middle;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#rv-dark-mode-toggle:hover {
+    opacity: 1;
+}
+
+
+/* ============================================================
+   Smooth transitions when toggling
+   ============================================================ */
+
+.rv-dark-mode-transitioning,
+.rv-dark-mode-transitioning *,
+.rv-dark-mode-transitioning *::before,
+.rv-dark-mode-transitioning *::after {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+
+/* ============================================================
+   Print - Always use light mode for printing
+   ============================================================ */
+
+@media print {
+    .rv-dark-mode,
+    .rv-dark-mode body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    #rv-dark-mode-toggle {
+        display: none !important;
+    }
+}
