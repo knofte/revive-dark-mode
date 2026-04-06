@@ -72,7 +72,7 @@ Edit the CSS custom properties at the top of `dark-mode.css`:
 }
 ```
 
-## Building
+## Building & Releasing
 
 ```bash
 chmod +x build.sh
@@ -80,6 +80,16 @@ chmod +x build.sh
 ```
 
 Produces `rvDarkMode.zip` ready for upload.
+
+**Important:** Version must be bumped in **three places** before building a release:
+
+| File | Field | Purpose |
+|------|-------|---------|
+| `plugins/etc/rvDarkMode.xml` | `<version>` | Package version shown in plugin list |
+| `plugins/etc/rvDarkMode/rvDarkMode.xml` | `<version>` | Component version |
+| `www/admin/plugins/rvDarkMode/rvDarkMode.class.php` | `const VERSION` | Cache-busting `?v=` on CSS/JS URLs |
+
+The ZIP filename must be exactly `rvDarkMode.zip` (Revive's plugin manager matches on the name).
 
 ## Known Limitations
 
