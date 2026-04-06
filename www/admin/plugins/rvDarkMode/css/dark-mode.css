@@ -249,6 +249,19 @@
     border-color: var(--rvd-border-primary);
 }
 
+.rv-dark-mode div.breadcrumb h3 {
+    color: var(--rvd-text-secondary);
+}
+
+.rv-dark-mode div.breadcrumb h3 span.label {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode div.breadcrumb h3 span.dest,
+.rv-dark-mode div.breadcrumb h3 span.target {
+    color: var(--rvd-text-muted);
+}
+
 .rv-dark-mode #thirdLevelContent {
     border-color: var(--rvd-border-primary);
     background: var(--rvd-bg-surface);
