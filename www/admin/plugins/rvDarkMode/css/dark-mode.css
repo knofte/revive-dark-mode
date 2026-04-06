@@ -633,29 +633,91 @@
 
 
 /* ============================================================
-   Plugin List Page
+   Error/Warning/Info Boxes (plugin pages, forms, etc.)
    ============================================================ */
 
-.rv-dark-mode .plugin-list,
-.rv-dark-mode .pluginDetails {
-    color: var(--rvd-text-primary);
+.rv-dark-mode div.error-box {
+    background-color: var(--rvd-error-bg) !important;
+    color: var(--rvd-error) !important;
+    border-color: var(--rvd-error-border);
 }
 
-.rv-dark-mode .plugin-list td,
-.rv-dark-mode .plugin-list th {
+.rv-dark-mode div.errormessage,
+.rv-dark-mode div.errormessageicon {
+    background-color: var(--rvd-warning-bg);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-warning-border);
+}
+
+.rv-dark-mode div.infomessage {
+    background-color: var(--rvd-info-bg);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-info-border);
+}
+
+.rv-dark-mode .form-message-error {
+    background-color: var(--rvd-error-bg);
+    color: var(--rvd-error);
+}
+
+
+/* ============================================================
+   Plugin List / Data Tables
+   ============================================================ */
+
+.rv-dark-mode table.data {
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode table.data thead td,
+.rv-dark-mode table.data thead th {
+    background-color: var(--rvd-table-header-bg);
     color: var(--rvd-text-primary);
     border-color: var(--rvd-border-primary);
 }
 
-/* The pink/salmon error banner on plugin pages */
-.rv-dark-mode [style*="background-color: #FFB0B0"],
-.rv-dark-mode [style*="background-color:#FFB0B0"],
-.rv-dark-mode [style*="background: #FFB0B0"],
-.rv-dark-mode [style*="background-color: #ff9798"],
-.rv-dark-mode [style*="background-color: rgb(255, 176, 176)"],
-.rv-dark-mode [style*="background-color: rgb(255, 151, 152)"] {
-    background-color: var(--rvd-error-bg) !important;
-    color: var(--rvd-error) !important;
+.rv-dark-mode table.data tbody td {
+    border-color: var(--rvd-border-primary);
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode table.data .item-info .name {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode table.data .item-info .version {
+    color: var(--rvd-text-muted);
+}
+
+.rv-dark-mode table.data .item-info p {
+    color: var(--rvd-text-secondary);
+}
+
+.rv-dark-mode table.data .action {
+    color: var(--rvd-accent);
+}
+
+.rv-dark-mode table.data .action:hover {
+    color: var(--rvd-accent-hover);
+}
+
+
+/* ============================================================
+   Control Panel (upload forms, etc.)
+   ============================================================ */
+
+.rv-dark-mode .control-panel {
+    background-color: var(--rvd-bg-surface);
+    border-color: var(--rvd-border-primary);
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .control-panel h2 {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .control-panel input[type="file"] {
+    color: var(--rvd-text-primary);
 }
 
 
