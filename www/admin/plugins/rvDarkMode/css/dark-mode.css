@@ -124,7 +124,7 @@
 
 .rv-dark-mode #oaNavigationTabs li span,
 .rv-dark-mode #oaNavigationTabs li a {
-    color: var(--rvd-text-secondary);
+    color: var(--rvd-text-primary);
 }
 
 .rv-dark-mode #oaNavigationTabs li:hover span,
@@ -141,6 +141,24 @@
 .rv-dark-mode #oaNavigationTabs li span,
 .rv-dark-mode #oaNavigationTabs li a {
     border-color: var(--rvd-border-primary);
+}
+
+/* Kill the GIF tab backgrounds that make text hard to read */
+.rv-dark-mode #oaNavigationTabs li,
+.rv-dark-mode #oaNavigationTabs li div.left,
+.rv-dark-mode #oaNavigationTabs li.first div.left,
+.rv-dark-mode #oaNavigationTabs li.last div.right,
+.rv-dark-mode #oaNavigationTabs li div.right,
+.rv-dark-mode #oaNavigationTabs li.after-active div.left {
+    background-image: none;
+    background-color: var(--rvd-bg-tertiary);
+}
+
+.rv-dark-mode #oaNavigationTabs li.active,
+.rv-dark-mode #oaNavigationTabs li.active div.left,
+.rv-dark-mode #oaNavigationTabs li.active div.right {
+    background-image: none;
+    background-color: var(--rvd-accent);
 }
 
 
@@ -179,10 +197,16 @@
 }
 
 .rv-dark-mode #secondLevelNavigation .navigation li.active ul li a {
-    color: var(--rvd-text-secondary);
+    color: var(--rvd-text-primary);
     background: var(--rvd-bg-surface);
     background-image: none;
     border-color: var(--rvd-border-primary);
+}
+
+/* Ensure all sidebar/nav submenu links are bright */
+.rv-dark-mode #secondLevelNavigation ul.navigation li a {
+    color: var(--rvd-text-primary);
+    background-image: none;
 }
 
 .rv-dark-mode #secondLevelNavigation .navigation li.active ul li a:hover {
