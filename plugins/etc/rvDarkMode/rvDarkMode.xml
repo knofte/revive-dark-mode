@@ -10,13 +10,14 @@
     <authorUrl>https://github.com/knofte/revive-dark-mode</authorUrl>
     <license>GPLv2</license>
     <description>Dark mode theme for Revive Adserver admin UI</description>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <oxversion>5.0.0</oxversion>
     <extends>admin</extends>
 
     <install>
         <files>
             <file path="{ADMINPATH}/css/">dark-mode.css</file>
+            <file path="{ADMINPATH}/js/">dark-mode-toggle.js</file>
             <file path="{ADMINPATH}/">rvDarkMode.class.php</file>
         </files>
 

@@ -633,6 +633,124 @@
 
 
 /* ============================================================
+   Plugin List Page
+   ============================================================ */
+
+.rv-dark-mode .plugin-list,
+.rv-dark-mode .pluginDetails {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .plugin-list td,
+.rv-dark-mode .plugin-list th {
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-primary);
+}
+
+/* The pink/salmon error banner on plugin pages */
+.rv-dark-mode [style*="background-color: #FFB0B0"],
+.rv-dark-mode [style*="background-color:#FFB0B0"],
+.rv-dark-mode [style*="background: #FFB0B0"],
+.rv-dark-mode [style*="background-color: #ff9798"],
+.rv-dark-mode [style*="background-color: rgb(255, 176, 176)"],
+.rv-dark-mode [style*="background-color: rgb(255, 151, 152)"] {
+    background-color: var(--rvd-error-bg) !important;
+    color: var(--rvd-error) !important;
+}
+
+
+/* ============================================================
+   Dashboard Widgets
+   ============================================================ */
+
+.rv-dark-mode .widget,
+.rv-dark-mode .dashboardWidget {
+    background-color: var(--rvd-bg-surface);
+    border-color: var(--rvd-border-primary);
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .widget h3,
+.rv-dark-mode .dashboardWidget h3,
+.rv-dark-mode .widget .header,
+.rv-dark-mode .dashboardWidget .header {
+    background-color: var(--rvd-bg-tertiary);
+    color: var(--rvd-text-primary);
+    border-color: var(--rvd-border-primary);
+}
+
+.rv-dark-mode .widget td,
+.rv-dark-mode .dashboardWidget td {
+    color: var(--rvd-text-primary);
+}
+
+.rv-dark-mode .widget a,
+.rv-dark-mode .dashboardWidget a {
+    color: var(--rvd-accent);
+}
+
+
+/* ============================================================
+   Catch-all: force text contrast on common elements
+   ============================================================ */
+
+.rv-dark-mode td,
+.rv-dark-mode th,
+.rv-dark-mode li,
+.rv-dark-mode p,
+.rv-dark-mode span,
+.rv-dark-mode div,
+.rv-dark-mode label {
+    color: inherit;
+}
+
+/* Override any inline color styles that use dark colors on dark bg */
+.rv-dark-mode [style*="color: #000"],
+.rv-dark-mode [style*="color:#000"],
+.rv-dark-mode [style*="color: black"],
+.rv-dark-mode [style*="color: rgb(0, 0, 0)"] {
+    color: var(--rvd-text-primary) !important;
+}
+
+.rv-dark-mode [style*="color: #333"],
+.rv-dark-mode [style*="color:#333"],
+.rv-dark-mode [style*="color: #444"],
+.rv-dark-mode [style*="color:#444"],
+.rv-dark-mode [style*="color: #666"],
+.rv-dark-mode [style*="color:#666"] {
+    color: var(--rvd-text-primary) !important;
+}
+
+/* Override inline background whites */
+.rv-dark-mode [style*="background-color: #fff"],
+.rv-dark-mode [style*="background-color:#fff"],
+.rv-dark-mode [style*="background-color: #FFF"],
+.rv-dark-mode [style*="background-color:#FFF"],
+.rv-dark-mode [style*="background-color: white"],
+.rv-dark-mode [style*="background: #fff"],
+.rv-dark-mode [style*="background:#fff"],
+.rv-dark-mode [style*="background: white"],
+.rv-dark-mode [style*="background-color: rgb(255, 255, 255)"] {
+    background-color: var(--rvd-bg-surface) !important;
+}
+
+.rv-dark-mode [style*="background-color: #f6f6f6"],
+.rv-dark-mode [style*="background-color:#f6f6f6"],
+.rv-dark-mode [style*="background-color: #F6F6F6"],
+.rv-dark-mode [style*="background-color:#F6F6F6"] {
+    background-color: var(--rvd-table-even) !important;
+}
+
+/* Override inline border colors */
+.rv-dark-mode [style*="border-color: #ddd"],
+.rv-dark-mode [style*="border-color:#ddd"],
+.rv-dark-mode [style*="border-color: #ccc"],
+.rv-dark-mode [style*="border-color:#ccc"] {
+    border-color: var(--rvd-border-primary) !important;
+}
+
+
+/* ============================================================
    Images - Invert certain UI icons for dark mode
    ============================================================ */
 
