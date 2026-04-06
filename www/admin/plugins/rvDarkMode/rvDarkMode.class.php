@@ -14,6 +14,8 @@ require_once LIB_PATH . '/Plugin/Component.php';
 
 class Plugins_Admin_RvDarkMode_RvDarkMode extends OX_Component
 {
+    const VERSION = '1.0.4';
+
     /**
      * Register UI event listeners.
      */
@@ -26,19 +28,18 @@ class Plugins_Admin_RvDarkMode_RvDarkMode extends OX_Component
 
     /**
      * Called before page header HTML is rendered.
-     * Registers both CSS and JS files.
+     * Registers both CSS and JS files with cache-busting version query.
      */
     public function injectDarkMode($oContext)
     {
         $pluginBase = MAX::constructURL(MAX_URL_ADMIN, 'plugins/rvDarkMode/');
+        $v = '?v=' . self::VERSION;
 
         // CSS: loads after core CSS in <head>, scoped under .rv-dark-mode
-        registerStylesheetFile($pluginBase . 'css/dark-mode.css');
+        registerStylesheetFile($pluginBase . 'css/dark-mode.css' . $v);
 
-        // JS: register via the same global UI instance and also directly
-        // into the global array to ensure it gets picked up by the template
-        $jsFile = $pluginBase . 'js/dark-mode-toggle.js';
+        // JS: toggle button + localStorage persistence
         $GLOBALS['_MAX']['ADMIN_UI'] = OA_Admin_UI::getInstance();
-        $GLOBALS['_MAX']['ADMIN_UI']->otherJSFiles[] = $jsFile;
+        $GLOBALS['_MAX']['ADMIN_UI']->otherJSFiles[] = $pluginBase . 'js/dark-mode-toggle.js' . $v;
     }
 }
